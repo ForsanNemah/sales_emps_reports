@@ -29,6 +29,25 @@ class EmpsReports extends Controller
     }
 
 
+    public function emp_report_no_edit($emp_id)
+    {
+
+
+      //  echo  $emp_id;
+
+      $date = date('Y-m-d');
+     //echo $date;
+   $customers =DB::select('select * from customers where emp_id=?  and date(created_at) = ?',[$emp_id,$date]);
+   //return    $customers; 
+   
+      return view('admin.html.emps.daily_report_for_emps')->with('customers', $customers );
+      //echo  $customers;
+        
+    
+    }
+
+
+
 
 
 

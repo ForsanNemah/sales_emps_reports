@@ -27,7 +27,7 @@
 
         <div class="dash-nav-dropdown">
             <a href="#!" class="dash-nav-item dash-nav-dropdown-toggle">
-                <i class="fas fa-chart-bar"></i> الموضفين والتقارير </a>
+                <i class="fas fa-chart-bar"></i> الموظفين والتقارير </a>
             <div class="dash-nav-dropdown-menu">
                 <a href="{{route('emp_create')}}" class="dash-nav-dropdown-item">اضافة</a>
                 <a href="{{route('emp_index')}}" class="dash-nav-dropdown-item">عرض</a>

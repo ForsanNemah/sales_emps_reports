@@ -31,6 +31,7 @@
             <div class="dash-nav-dropdown-menu">
                 <a href="{{route('customers.create')}}" class="dash-nav-dropdown-item">زيارة </a>
                 <a href="{{route('customer_add_with_mony')}}" class="dash-nav-dropdown-item">بيع </a>
+                <a href="{{route('emp_report_no_edit',auth()->user()->id ) }}" class="dash-nav-dropdown-item">تقريري اليومي </a>
             </div>
         </div>
 

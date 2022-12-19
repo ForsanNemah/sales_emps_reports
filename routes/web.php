@@ -62,6 +62,7 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('/emp_report/{emp_id}',[App\Http\Controllers\EmpsReports::class,'emp_report_daily'])->name('emp_report');
     Route::get('/emp_report_full/{emp_id}',[App\Http\Controllers\EmpsReports::class,'emp_report_full'])->name('emp_report_full');
     Route::get('/full_all_emps_report',[App\Http\Controllers\EmpsReports::class,'full_all_emps_report'])->name('full_all_emps_report');
+    Route::get('/emp_report_no_edit/{emp_id}',[App\Http\Controllers\EmpsReports::class,'emp_report_no_edit'])->name('emp_report_no_edit');
    
 
    
