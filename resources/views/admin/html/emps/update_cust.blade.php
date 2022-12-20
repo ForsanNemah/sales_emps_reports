@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
 
- 
+    
 @include('admin.html.import')
 <body>
     <div class="dash">
@@ -139,7 +139,7 @@
                                                 </div>
                                                 <div class="col-md-12">
                                                     <br>
-                                                    <button type="submit" class="btn btn-primary">انشاء</button>
+                                                    <button type="submit" class="btn btn-primary">حفظ</button>
                                                 </div>
                                             </div>
                                         </form>

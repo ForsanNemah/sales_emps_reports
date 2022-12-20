@@ -95,6 +95,7 @@
                                                         <form method="post" onclick="return confirm('هل تريد الحذف ؟')"  action="{{route('emp_destroy.destroy',$users->id)}}">
                                                             @method('delete')
                                                             @csrf
+                                                           
                                                             <button type="submit" class="btn btn-danger btn-sm">حذف</button>
                                                         </form>
                                                     </td>
@@ -104,6 +105,7 @@
                                                         
                                                         <a href="{{route('emp_report',$users->id)}}" class="btn btn-primary a-btn-slide-text">
                                                             <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
+                                                          
                                                             <span><strong>تقرير يومي </strong></span>            
                                                         </a>
                                                     
@@ -114,6 +116,7 @@
                                                         
                                                         <a href="{{route('emp_report_full',$users->id)}}" class="btn btn-primary a-btn-slide-text">
                                                             <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
+                                                            
                                                             <span><strong>تقرير شامل</strong></span>            
                                                         </a>
                                                     

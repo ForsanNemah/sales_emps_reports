@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Customer;
 use DB;
+use Session;
 
 class EmpsReports extends Controller
 {
@@ -14,7 +15,7 @@ class EmpsReports extends Controller
     public function emp_report_daily($emp_id)
     {
 
-
+      Session::put('emp_id',$emp_id);
       //  echo  $emp_id;
 
       $date = date('Y-m-d');
@@ -32,7 +33,7 @@ class EmpsReports extends Controller
     public function emp_report_no_edit($emp_id)
     {
 
-
+      Session::put('emp_id',$emp_id);
       //  echo  $emp_id;
 
       $date = date('Y-m-d');
@@ -56,6 +57,7 @@ class EmpsReports extends Controller
     {
 
 
+      Session::put('emp_id',$emp_id);
       //  echo  $emp_id;
 
       $date = date('Y-m-d');
@@ -76,7 +78,7 @@ class EmpsReports extends Controller
     public function  full_all_emps_report()
     {
 
-
+      
       //  echo  $emp_id;
 
        

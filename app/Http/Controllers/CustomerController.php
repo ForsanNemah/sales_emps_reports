@@ -7,6 +7,8 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Crypt;
 use Redirect;
+use Session;
+use DB;
 
 class CustomerController extends Controller
 {
@@ -158,7 +160,11 @@ class CustomerController extends Controller
          
        
         
-        return Redirect::back();
+        $customers =DB::select('select * from customers where emp_id=?   ',[Session::get('emp_id')]);
+        //return    $customers; 
+        
+           //return view('admin.html.emps.full_all_emps_report')
+           return view('admin.html.emps.daily_report')->with('customers', $customers);
 
     }
 
@@ -168,10 +174,16 @@ class CustomerController extends Controller
      * @param  \App\Models\Customer  $customer
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Customer $customer)
+    public function destroy( $id)
     {
+
+         
         //
-        echo Customer::where('id', $id)->delete();
-        return redirect()->route('daily_reports')->with('done', 'تم الحذف بنجاح');
+       echo Customer::where('id', $id)->delete();
+       $customers =DB::select('select * from customers where emp_id=?   ',[Session::get('emp_id')]);
+       //return    $customers; 
+       
+          //return view('admin.html.emps.full_all_emps_report')
+          return view('admin.html.emps.daily_report')->with('customers', $customers);
     }
 }

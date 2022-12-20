@@ -39,7 +39,7 @@
             <a href="#!" class="dash-nav-item dash-nav-dropdown-toggle">
                 <i class="fas fa-chart-bar"></i>   تقرير شامل </a>
             <div class="dash-nav-dropdown-menu">
-                <a href=""{{route('full_all_emps_report')}}" class="dash-nav-dropdown-item">عرض</a>
+                <a href="{{route('full_all_emps_report')}}" class="dash-nav-dropdown-item">عرض</a>
             </div>
         </div>
 

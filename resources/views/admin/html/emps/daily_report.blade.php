@@ -87,11 +87,12 @@
                                         </thead>
                                         <tbody>
                                             
-
+                                            {{ Session::put('customers',$customers)}}
                                             @if (!empty($customers))
                                             @foreach ($customers as $customer)
                                                 <tr>
                                                     <th scope="row">{{ $customer->id }}</th>
+                                                   
                                                     <td>{{ $customer->name }}</td>
                                                     <td>{{ $customer->meeted_person_position ?? 'لايوجد' }}</td>
                                                     <td>{{ $customer->business_type }}</td>
@@ -152,6 +153,7 @@
                                                     <td>
                                                         <form method="post" onclick="return confirm('هل تريد الحذف ؟')"  action="{{route('customers.destroy',$customer->id)}}">
                                                             @method('delete')
+                                                           
                                                             @csrf
                                                             <button type="submit" class="btn btn-danger btn-sm">حذف</button>
                                                         </form>
