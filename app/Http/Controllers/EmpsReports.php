@@ -20,7 +20,7 @@ class EmpsReports extends Controller
 
       $date = date('Y-m-d');
      //echo $date;
-   $customers =DB::select('select * from customers where emp_id=?  and date(created_at) = ?',[$emp_id,$date]);
+   $customers =DB::select('select * from customers where emp_id=?  and date(created_at) = ? ORDER BY id DESC',[$emp_id,$date]);
    //return    $customers; 
    
       return view('admin.html.emps.daily_report')->with('customers', $customers );
@@ -38,7 +38,7 @@ class EmpsReports extends Controller
 
       $date = date('Y-m-d');
      //echo $date;
-   $customers =DB::select('select * from customers where emp_id=?  and date(created_at) = ?',[$emp_id,$date]);
+   $customers =DB::select('select * from customers where emp_id=?  and date(created_at) = ? ORDER BY id DESC',[$emp_id,$date]);
    //return    $customers; 
    
       return view('admin.html.emps.daily_report_for_emps')->with('customers', $customers );
@@ -62,7 +62,7 @@ class EmpsReports extends Controller
 
       $date = date('Y-m-d');
      //echo $date;
-   $customers =DB::select('select * from customers where emp_id=?   ',[$emp_id]);
+   $customers =DB::select('select * from customers where emp_id=?  ORDER BY id DESC  ',[$emp_id]);
    //return    $customers; 
    
       return view('admin.html.emps.full_report')->with('customers', $customers );
@@ -82,7 +82,7 @@ class EmpsReports extends Controller
       //  echo  $emp_id;
 
        
-   $customers =DB::select('select * from customers   ');
+   $customers =DB::select('select * from customers ORDER BY id DESC  ');
    //return    $customers; 
    
       return view('admin.html.emps.full_all_emps_report')->with('customers', $customers );

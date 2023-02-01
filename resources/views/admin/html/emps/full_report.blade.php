@@ -72,12 +72,13 @@
                     <th > العنوان</th>
                    
                     <th scope="col"> المبلغ</th>
-                   
+                   <!--
                     <th scope="col"> حساب فيسبوك</th>
                     <th scope="col"> حساب تويتر</th>
                     <th scope="col"> حساب انستجرام</th>
                     <th scope="col"> حساب سناب</th>
                     <th scope="col"> حساب تيكتوك</th>
+                   -->
                     <th scope="col">ملاحضات </th>
                     <th> التاريخ</th>
                                                 
@@ -103,7 +104,7 @@
                                                   
                                                     <td>{{ $customer->money ?? 'لايوجد' }}</td>
                         
-                                                  
+                                                  <!--
                                                     
                                                     <td><a href="{{ $customer->facebook }}">
                                                         <i class="fab fa-facebook-f"></i>
@@ -134,7 +135,7 @@
                                                   
 
 
-
+                                                    -->
                                                     <td>{{ $customer->note }}</td>
                                                     <td>{{ $customer->created_at }}</td>
                                                     
